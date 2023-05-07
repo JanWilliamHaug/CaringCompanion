@@ -24,7 +24,7 @@ function App() {
     };
 
     try {
-      const res = await fetch('http://localhost:5000/chatbot/message', requestOptions);
+      const res = await fetch('http://localhost:3000/chatbot/message', requestOptions);
       const data = await res.json();
       setMessages([...messages, { text: input, sender: 'user' }, { text: data.response, sender: 'chatbot' }]);
       setInput('');
